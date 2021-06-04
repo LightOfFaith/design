@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>design-archetype-web</artifactId>
+<groupId>com.union.design</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>design-service</artifactId>
+
+    <dependencies>
+        <dependency>
+    <groupId>com.union.design</groupId>
+            <artifactId>design-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+    <groupId>com.union.design</groupId>
+            <artifactId>design-dao</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+    <groupId>com.union.design</groupId>
+            <artifactId>design-manager</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+        <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
+        <maven.test.skip>false</maven.test.skip>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.testSource>1.8</maven.compiler.testSource>
+        <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
+        <maven.compiler.verbose>false</maven.compiler.verbose>
+    </properties>
+</project>

@@ -1,0 +1,38 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.union.design.dao.mybatis.mapper.UserMapper">
+
+    <resultMap id="entityMap" type="com.union.design.dao.mybatis.entity.BaseEntity">
+        <id column="id" property="id"/>
+        <result column="create_time" property="createTime"/>
+        <result column="modify_time" property="modifyTime"/>
+        <result column="is_deleted" property="deleted"/>
+    </resultMap>
+
+    <resultMap id="userMap" type="com.union.design.dao.mybatis.entity.User" extends="entityMap">
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+    </resultMap>
+
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id"
+            parameterType="com.union.design.dao.mybatis.entity.User">
+        insert into `user` (`name`, `age`)
+        values (#{name},#{age})
+    </insert>
+
+    <update id="logicDeleteUserById" parameterType="long">
+        <bind name="deleted" value="true" />
+        update `user`
+        set is_deleted = #{deleted}
+        where id = #{id}
+    </update>
+
+    <select id="getUserById" parameterType="long" resultMap="userMap">
+        select `id`, `create_time`, `modify_time`, `is_deleted`, `name`, `age`
+        from `user`
+        where id = #{id}
+    </select>
+
+</mapper>

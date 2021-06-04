@@ -1,0 +1,10 @@
+# Project exclude paths
+/design-archetypes/design-archetype-admin/design-auth/target/
+/design-archetypes/design-archetype-web/design-api/target/
+/design-archetypes/design-archetype-web/design-common/target/
+/design-archetypes/design-archetype-web/design-dao/target/
+/design-archetypes/design-archetype-web/design-generator/target/
+/design-archetypes/design-archetype-web/design-manager/target/
+/design-archetypes/design-archetype-web/design-service/target/
+/design-archetypes/design-archetype-web/design-web/target/
+/design-archetypes/design-archetype-web/start/target/
